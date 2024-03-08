@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style_contact.css">
+    <title>My Web Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="conocenos.html">Conocenos</a></li>
+            <li class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li class="login-icon">
+                <a href="http://www.ebusiness.cl/FLETESORVICENTA/index.php">
+                    <img src="images/login.svg" alt="Iniciar Sesión">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="contacto">
+        <div class="container">
+            <div class="contact-form">
+                <h2>Completa el formulario y nos podremos en contacto</h2>
+                <form action="enviar.php" method="post">
+                    <input type="text" id="name" name="name" placeholder="Nombre Completo" required title="Este campo es obligatorio.">
+                    <input type="email" id="email" name="email" placeholder="Email" required title="Por favor, introduce una dirección de correo electrónico válida.">
+                    <input type="tel" id="phone" name="phone" placeholder="Teléfono" required pattern="^\+?\d{0,13}" title="Por favor, introduce un número de teléfono válido.">
+                    <textarea id="message" name="message" placeholder="Mensaje" required title="Por favor, escribe tu mensaje."></textarea>
+                    <button type="submit">ENVIAR MENSAJE</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>CASA MATRIZ</h3>
+                <p>Av. Cinco de Abril 4372, Estación Central.</p>
+                <a href="#">Ver cómo llegar ></a>
+                <h3>SÍGUENOS</h3>
+                <div class="social-links">
+                    <a href="#">f</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="tu_logo.png" alt="Logo de la empresa">
+                <p>Una pequeña descripción de tu empresa.</p>
+                <p>&copy; 2024 Transportes Sorvicenta. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <div class="contact-info">
+                    <h3>Contacto</h3>
+                    <p><strong>Casa Matriz:</strong> Dirección de la casa matriz</p>
+                    <p><strong>Correo:</strong> info@tuempresa.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="enviar.php"></script>
+
+
+</body>
+</html>

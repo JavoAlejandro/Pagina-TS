@@ -1,0 +1,174 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+#Servicios {
+    flex: 1; /* Hace que el contenido ocupe el espacio disponible */
+    padding-bottom: 60px; /* Ajusta el padding para evitar que el pie de página se superponga */
+    background: white;
+}
+
+.services-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.services-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.services-section p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
+    gap: 20px; /* Esto crea un espacio entre los elementos de servicio */
+}
+
+.service-item {
+    flex-basis: calc(50% - 20px); /* Ajusta el ancho de los elementos de servicio teniendo en cuenta el gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido de cada elemento de servicio */
+    margin-bottom: 20px; /* Espacio debajo de cada elemento de servicio */
+}
+
+.icon-container {
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex; /* Cambiado a flex para centrar el SVG dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 120px; /* Ancho fijo para el contenedor del icono */
+    height: 120px; /* Altura fija para el contenedor del icono */
+    overflow: hidden; /* Evita que el contenido desborde */
+}
+
+
+.icon-container-modal{
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    padding: 2vw;
+    display: flex; /* Cambiado a flex para centrar el SVG dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 70%; /* Ancho fijo para el contenedor del icono */
+    height: 50%; /* Altura fija para el contenedor del icono */
+    overflow: hidden; /* Evita que el contenido desborde */
+    margin: auto;
+}
+.icon-container img {
+    max-width: 100%; /* Asegúrate de que el SVG no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegúrate de que el SVG no exceda el tamaño del contenedor */
+    display: block; /* Elimina el espacio extra debajo del SVG */
+}
+
+.service-item h3 {
+    font-size: 16px; /* o el tamaño que prefieras */
+    margin-bottom: 10px;
+}
+
+.service-item button {
+    border: none;
+    background-color: rgb(226, 7, 20 ); /* o tu color preferido */
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-item button:hover {
+    background-color: rgb(18, 6, 6); /* o un tono más oscuro de tu color preferido */
+    transform: scale(1.1);
+}
+
+
+.service-item button .texto {
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+
+.service-item button:hover .texto {
+  color: #ffffff;
+  transform: rotate(5deg);
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-contenido {
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+  }
+  @media (max-width: 768px) {
+    .modal-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+  .texto{
+    margin-left: 20px;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el fondo oscurecido */
+  .fondo-oscuro {
+    display: none;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Propiedad para aplicar un desenfoque */
+  }
+  
+
+

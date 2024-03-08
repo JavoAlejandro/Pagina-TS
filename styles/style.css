@@ -1,0 +1,148 @@
+body {
+    margin-top: 90px; /* Ajusta el margen superior según sea necesario */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+}
+
+/* BARRA DE NAVEGACION */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fdfdfd; /* O el color que hayas elegido para tu barra de navegación */
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul {
+    margin-left: 50px;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    /*height: 50px;*/ /* Ajusta la altura según sea necesario */
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido del <li> */
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+
+#navbar li.logo {
+    flex-grow: 3;
+}
+
+#navbar li.logo a {
+    align-items: center; /* Centra verticalmente el logo */
+    justify-content: center; /* Centra horizontalmente el logo */
+}
+
+#navbar li a {
+    width: 100%; /* Ocupa todo el ancho de <li> */
+    height: 100%; /* Ocupa todo el alto de <li>*/
+    text-align: center;
+    line-height: 50px; /* Igual al alto de tu <li> para centrar el texto verticalmente */
+    padding: 15px 0; /* Ajusta el padding según sea necesario */
+    color: #000000;
+    text-decoration: none;
+}
+
+#navbar li.logo img, #navbar li.login-icon img {
+    height: auto; /* Esto mantendrá la proporción del logo y el icono de login */
+    max-height: 50px; /* Ajusta esta altura según sea necesario */
+}
+
+#navbar li a:hover {
+    background-color: #111;
+    color: #ffffff;
+}
+
+#navbar .login-icon {
+    flex-grow: 0; /* El área de login no crecerá y mantendrá su tamaño */
+}
+
+/* BUSCADOR Y COTIZADOR */
+
+.tab-content {
+    display: none; /* Oculta todo el contenido de la pestaña por defecto */
+  }
+  
+  .tab-content.active {
+    display: block; /* Muestra el contenido de la pestaña activa */
+  }
+  
+  .tab-button {
+    /* Estilos para los botones de las pestañas */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+  .tab-button:hover {
+    background-color: #111;
+    }
+
+/* FOOTER */
+
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left img {
+    width: 100px; /* ajusta el tamaño según tu logo */
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.contact-info {
+    border: 2px solid white; /* Borde blanco */
+    padding: 20px;
+}
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style_cotizador.css">
+    <title>My Web Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="conocenos.html">Conocenos</a></li>
+            <li class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></li>
+            <li><a href="get_news.php">Noticias</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li class="login-icon">
+                <a href="http://www.ebusiness.cl/FLETESORVICENTA/index.php">
+                    <img src="images/login.svg" alt="Iniciar Sesión">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <section id="seccion1">
+      
+      <div id="seguimiento" class="tab-content">
+        <!-- Contenido para Seguimiento -->
+        <div>
+            <div id="beetrack_widget" lang="es" api-key="DGEoJVjAzU2WyhOT8xhoMQ" style="color: #FF0000;"></div>
+            <!-- <script type="text/javascript" charset="UTF-8" language="javascript" src="https://beetrack-general.s3-us-west-2.amazonaws.com/widget/DGEoJVjAzU2WyhOT8xhoMQ.json"></script>
+            <script async src="https://app.beetrack.cl/javascript_widget/beetrack_widget.js"></script> -->
+        </div>
+      </div>
+      
+      <div id="cotizador" class="tab-content">
+        <!-- Contenido para Cotizador -->
+        <div class="name-section">
+            <div class="flecha">Información Cliente</div>
+        </div>
+        <div class="input-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Nombre completo" maxlength="50">
+        </div>
+        <div class="input-group">
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut" placeholder="12345678-9" maxlength="50">
+        </div>
+        <div class="input-group">
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" maxlength="50">
+        </div>
+        <div class="input-group">
+            <label for="phone">Teléfono:</label>
+            <input type="number" id="phone" name="phone" placeholder="911111111" maxlength="9">
+        </div>
+        <div class="name-section">
+            <div class="flecha">Gramaje</div>
+        </div>
+        <div class="input-group">
+            <label for="height">Peso: (KG)</label>
+            <input type="number" id="height" name="height" min="0.0" placeholder="0.0">
+        </div>
+        <div class="input-group">
+            <label for="contenido">Contenido:</label>
+            <div class="custom-select">
+                <select id="contenido" name="contenido">
+                    <option>Quimico</option>
+                    <option>Alimentario</option>
+                    <option>Plastico</option>
+                    <!-- Más opciones -->
+                </select>
+            </div>
+        </div>
+        <div class="name-section">
+            <div class="flecha">Formato</div>
+        </div>
+        <div class="input-group">
+            <label for="empaque">Empaque:</label>
+            <div class="custom-select">
+                <select id="empaque" name="empaque">
+                    <option>Caja</option>
+                    <option>Bulto</option>
+                    <!-- Más opciones -->
+                </select>
+            </div>
+        </div>
+        <div class="input-group-horizontal">
+            <div class="input-group">
+                <label for="length">Largo: (CM)</label>
+                <input type="number" id="length" name="length" min="0" placeholder="0" max="100000">
+            </div>
+            <div class="input-group">
+                <label for="width">Ancho: (CM)</label>
+                <input type="number" id="width" name="width" min="0" placeholder="0" max="100000">
+            </div>
+            <div class="input-group">
+                <label for="height">Alto: (CM)</label>
+                <input type="number" id="height" name="height" min="0" placeholder="0" max="100000">
+            </div>
+        </div>
+        <div class="name-section">
+            <div class="flecha">Tramo</div>
+        </div>
+        <div class="input-group">
+            <label for="origin">Origen:</label>
+            <div class="custom-select">
+                <select id="origin" name="origin">
+                    <option>Santiago</option>
+                    <option>Los Angeles</option>
+                    <!-- Más opciones -->
+                </select>
+            </div>
+            
+        </div>
+        <div class="input-group">
+            <label for="destination">Destino:</label>
+            <div class="custom-select">
+                <select id="destination" name="destination">
+                    <option>Los Angeles</option>
+                    <!-- Más opciones -->
+                </select>
+            </div>
+        </div>
+        <div class="name-section">
+            <div class="flecha">Subir Imágenes</div>
+        </div>
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image1" name="image" onchange="handleImageChange(1)" accept="image/png, image/jpeg">
+                <label class="custom-file-label" id="label1" for="image1">Adjuntar imagen (opcional)</label>
+                <span id="removeButton1" class="remove-file" style="display: none;" onclick="removeFile(1)">❌</span>
+            </div>
+        </div>
+        <button id="addImageButton" style="display: none;" onclick="toggleAddImage()">Añadir otra imagen</button>
+        <div class="name-section">
+            <div class="flecha">Detalle</div>
+        </div>
+        <div class="input-group">
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" rows="4" cols="50" placeholder="Añade una descripción..."></textarea>
+        </div>
+        <button>Calcular</button>
+        <label id="result"></label>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-button" onclick="openTab(event, 'seguimiento')">Seguimiento</button>
+        <button class="tab-button" onclick="openTab(event, 'cotizador')">Cotizador</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <!-- <img src="tu_logo.png" alt="Logo de la empresa"> -->
+                <p>Una pequeña descripción de tu empresa.</p>
+                <p>&copy; 2024 Transportes Sorvicenta. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <div class="contact-info">
+                    <h3>Contacto</h3>
+                    <p><strong>Casa Matriz:</strong> Dirección de la casa matriz</p>
+                    <p><strong>Correo:</strong> info@tuempresa.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script_cotizador.js"></script>
+</body>
+</html>

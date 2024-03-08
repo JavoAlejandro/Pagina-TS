@@ -1,0 +1,139 @@
+.meet-section {
+    text-align: center;
+    padding: 20px 20px;
+    margin-bottom: 100px;
+}
+
+.meet-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.meet-section p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+.icon-experience {
+    display: flex; /* Cambiado a flex para centrar el SVG dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 10vw; /* Ancho fijo para el contenedor del icono */
+    height: 10vw; /* Altura fija para el contenedor del icono */
+    overflow: hidden; /* Evita que el contenido desborde */
+}
+.icon-experience img {
+    max-width: 100%; /* Asegúrate de que el SVG no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegúrate de que el SVG no exceda el tamaño del contenedor */
+    display: block; /* Elimina el espacio extra debajo del SVG */
+}
+
+.icon-text{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Galeria */
+
+.galeria {
+    margin: 0 auto;
+    display: flex;
+    width: 80vw;
+    height: 40vw;
+}
+
+.galeria img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.galeria img:hover {
+    cursor: crosshair;
+    width: 12vw;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.galeria div {
+    width: 0px;
+    flex-grow: 1;
+    opacity: .8;
+    transition: .9s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    
+}
+.galeria div:hover {
+    cursor: crosshair;
+    width: 40vw;
+    opacity: 1;
+    filter: contrast(120%);
+
+    .texto_vertical {
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        transition: .3s ease;
+        margin-right: 0vw;
+        margin-left: 0vw;
+    
+    }
+}
+
+ .texto_vertical  {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: justify;
+    font-size: 7vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+
+    font-family: 'Poppins', sans-serif;
+    color: rgb(226, 7, 20 );
+  }
+
+  .cuerpo_texto {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.0em;
+    text-align: justify;
+    word-spacing: 0.25em;
+    margin: 10px;
+  }
+
+  /* Media Query para pantallas menores de 768px */
+@media (max-width: 767px) {
+    .galeria {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .galeria img,
+    .galeria div {
+        width: 100%;
+        height: auto;
+    }
+
+    .galeria img:hover,
+    .galeria div:hover {
+        width: auto;
+        opacity: .8;
+        filter: none;
+    }
+
+    .texto_vertical {
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        font-size: 4vw; /* Reducir el tamaño del texto vertical para pantallas pequeñas */
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

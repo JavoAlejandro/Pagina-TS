@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style_servicios.css">
+    <link rel="stylesheet" type="text/scss" href="styles/style_buton.scss">
+    <title>My Web Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="conocenos.html">Conocenos</a></li>
+            <li class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li class="login-icon">
+                <a href="http://www.ebusiness.cl/FLETESORVICENTA/index.php">
+                    <img src="images/login.svg" alt="Iniciar Sesión">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="Servicios">
+        <div class="services-section">
+            <h2>Servicios</h2>
+            <p>QUÉ ENTREGAMOS A NUESTROS CLIENTES</p>
+            <div class="services-container">
+                <!-- Servicio 1 -->
+                <div class="service-item">
+                    <div class="icon-container">
+                        <img src="images/catering.svg" alt="Servicio 1">
+                    </div>
+                    <h3>Distribución y logística</h3>
+                    <button id="servicio1">
+                        <span class="texto">VER MÁS</span>
+                    </button>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="service-item">
+                    <div class="icon-container">
+                        <img src="images/box.svg" alt="Servicio 2">
+                    </div>
+                    <h3>Encomiendas</h3>
+                    <button id="servicio2">
+                        <span class="texto">VER MÁS</span>
+                    </button>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="service-item">
+                    <div class="icon-container">
+                        <img src="images/truck.svg" alt="Servicio 3">
+                    </div>
+                    <h3>Transporte y carga</h3>
+                    <button id="servicio3">
+                        <span class="texto">VER MÁS</span>
+                    </button>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="service-item">
+                    <div class="icon-container">
+                        <img src="images/transport.svg" alt="Servicio 4">
+                    </div>
+                    <h3>Mudanzas</h3>
+                    <button id="servicio4">
+                        <span class="texto">VER MÁS</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal1 -->
+        <div id="modal_servicio1" class="modal">
+            <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal1">&times;</span>
+                <div class="icon-container-modal">
+                    <img src="images/catering.svg" alt="Servicio 1">
+                </div>
+                <div class="texto">
+                    <h2>Distribución y logística</h2>
+                    <p>En Transportes Sorvicenta, nuestra distribución y logística son pilares de excelencia. 
+                        Con una atención meticulosa a los detalles y un compromiso inquebrantable con la calidad, 
+                        ofrecemos abastecimiento de sus productos a locales regionales. 
+                        Confíe en Transportes Sorvicenta para llevar sus productos con éxito hacia su destino de forma impecable</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal2 -->
+        <div id="modal_servicio2" class="modal">
+            <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal2">&times;</span>
+                <div class="icon-container-modal">
+                    <img src="images/box.svg" alt="Servicio 2">
+                </div>
+                <div class="texto">
+                    <h2>Encomiendas</h2>
+                    <p>
+                        El servicio de encomienda de Transportes Sorvicenta es sinónimo de confiabilidad y eficiencia, 
+                        atendiendo tanto a empresas como a particulares. 
+                        Nuestra red de transporte confiable y segura garantiza que sus paquetes lleguen a su destino de manera rápida y intacta, 
+                        desde la Región de Ñuble hasta la Región de Los Lagos. 
+                        Con un equipo comprometido y una infraestructura sólida, gestionamos cada envío con atención meticulosa y cuidado excepcional. 
+                        Desde documentos importantes hasta paquetes voluminosos, ofrecemos soluciones de envío adaptadas a las necesidades de cada cliente. 
+                        Confíe en Transportes Sorvicenta para entregar sus encomiendas de forma oportuna y segura, superando sus expectativas en cada entrega.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal3 -->
+        <div id="modal_servicio3" class="modal">
+            <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal3">&times;</span>
+            <div class="icon-container-modal">
+                <img src="images/truck.svg" alt="Servicio 3">
+            </div>
+            <div class="texto">
+                <h2>Transporte y carga</h2>
+                <p>
+                    El servicio de transporte y carga por carretera de Transportes Sorvicenta es una opción confiable y eficiente para empresas y particulares. 
+                    Con una flota moderna y segura compuesta por más de 20 camiones, cubrimos rutas desde la Región de Ñuble hasta la Región de Los Lagos, garantizando entregas rápidas y seguras. 
+                    Nuestros conductores altamente capacitados y nuestra logística precisa aseguran la integridad de la carga en todo momento. Ofrecemos soluciones personalizadas para diferentes tipos de mercancía, optimizando tiempos y costos para nuestros clientes. 
+                    Confíe en Transportes Sorvicenta para un transporte terrestre confiable y profesional.</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal4 -->
+        <div id="modal_servicio4" class="modal">
+            <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal4">&times;</span>
+            <div class="icon-container-modal">
+                <img src="images/transport.svg" alt="Servicio 4">
+            </div>
+            <div class="texto">
+                <h2>Mudanzas</h2>
+                <p>
+                El servicio de mudanzas de Transportes Sorvicenta redefine la excelencia en el traslado de hogares y empresas. 
+                Nuestro equipo altamente capacitado garantiza una mudanza sin contratiempos. 
+                Desde el embalaje hasta la entrega, cuidamos cada paso con precisión y profesionalismo, 
+                brindando tranquilidad a nuestros clientes en cada momento del proceso. Con un enfoque personalizado, 
+                nos adaptamos a las necesidades específicas de cada cliente, asegurando una experiencia de mudanza sin estrés y totalmente satisfactoria. 
+                Confíe en Transportes Sorvicenta para hacer de su mudanza una experiencia fluida y exitosa.</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Fondo oscurecido -->
+        <div id="fondoOscuro" class="fondo-oscuro"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="tu_logo.png" alt="Logo de la empresa">
+                <p>Una pequeña descripción de tu empresa.</p>
+                <p>&copy; 2024 Transportes Sorvicenta. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <div class="contact-info">
+                    <h3>Contacto</h3>
+                    <p><strong>Casa Matriz:</strong> Dirección de la casa matriz</p>
+                    <p><strong>Correo:</strong> info@tuempresa.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script_info.js"></script>
+</body>
+</html>
